@@ -66,5 +66,5 @@ class Home extends React.Component {
         );
     }
 }
-// end
+// --end
 export default Home;
