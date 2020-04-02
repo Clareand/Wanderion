@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Web3AP-ClaraPutri/static/css/main.1144c280.chunk.css",
-    "main.js": "/Web3AP-ClaraPutri/static/js/main.ac28f14b.chunk.js",
-    "main.js.map": "/Web3AP-ClaraPutri/static/js/main.ac28f14b.chunk.js.map",
-    "runtime-main.js": "/Web3AP-ClaraPutri/static/js/runtime-main.5f8c6b02.js",
-    "runtime-main.js.map": "/Web3AP-ClaraPutri/static/js/runtime-main.5f8c6b02.js.map",
-    "static/css/2.1bd2ab2f.chunk.css": "/Web3AP-ClaraPutri/static/css/2.1bd2ab2f.chunk.css",
-    "static/js/2.48f12264.chunk.js": "/Web3AP-ClaraPutri/static/js/2.48f12264.chunk.js",
-    "static/js/2.48f12264.chunk.js.map": "/Web3AP-ClaraPutri/static/js/2.48f12264.chunk.js.map",
-    "index.html": "/Web3AP-ClaraPutri/index.html",
-    "precache-manifest.53c6708570c9e5a6a67a1f072ecd9a52.js": "/Web3AP-ClaraPutri/precache-manifest.53c6708570c9e5a6a67a1f072ecd9a52.js",
-    "service-worker.js": "/Web3AP-ClaraPutri/service-worker.js",
-    "static/css/2.1bd2ab2f.chunk.css.map": "/Web3AP-ClaraPutri/static/css/2.1bd2ab2f.chunk.css.map",
-    "static/css/main.1144c280.chunk.css.map": "/Web3AP-ClaraPutri/static/css/main.1144c280.chunk.css.map",
-    "static/js/2.48f12264.chunk.js.LICENSE.txt": "/Web3AP-ClaraPutri/static/js/2.48f12264.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/Web3AP-ClaraPutri/static/media/logo.ee7cd8ed.svg",
-    "static/media/magic-wand.png": "/Web3AP-ClaraPutri/static/media/magic-wand.1d583ddf.png",
-    "static/media/orion-hand.jpg": "/Web3AP-ClaraPutri/static/media/orion-hand.3cc457d7.jpg",
-    "static/media/telescope.png": "/Web3AP-ClaraPutri/static/media/telescope.860e021f.png"
+    "main.css": "/Wanderion/static/css/main.1144c280.chunk.css",
+    "main.js": "/Wanderion/static/js/main.7debfbb3.chunk.js",
+    "main.js.map": "/Wanderion/static/js/main.7debfbb3.chunk.js.map",
+    "runtime-main.js": "/Wanderion/static/js/runtime-main.78923e75.js",
+    "runtime-main.js.map": "/Wanderion/static/js/runtime-main.78923e75.js.map",
+    "static/css/2.1bd2ab2f.chunk.css": "/Wanderion/static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.48f12264.chunk.js": "/Wanderion/static/js/2.48f12264.chunk.js",
+    "static/js/2.48f12264.chunk.js.map": "/Wanderion/static/js/2.48f12264.chunk.js.map",
+    "index.html": "/Wanderion/index.html",
+    "precache-manifest.c4957c6968f2d4c0b89aa955caa298e3.js": "/Wanderion/precache-manifest.c4957c6968f2d4c0b89aa955caa298e3.js",
+    "service-worker.js": "/Wanderion/service-worker.js",
+    "static/css/2.1bd2ab2f.chunk.css.map": "/Wanderion/static/css/2.1bd2ab2f.chunk.css.map",
+    "static/css/main.1144c280.chunk.css.map": "/Wanderion/static/css/main.1144c280.chunk.css.map",
+    "static/js/2.48f12264.chunk.js.LICENSE.txt": "/Wanderion/static/js/2.48f12264.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Wanderion/static/media/logo.ee7cd8ed.svg",
+    "static/media/magic-wand.png": "/Wanderion/static/media/magic-wand.1d583ddf.png",
+    "static/media/orion-hand.jpg": "/Wanderion/static/media/orion-hand.3cc457d7.jpg",
+    "static/media/telescope.png": "/Wanderion/static/media/telescope.860e021f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f8c6b02.js",
+    "static/js/runtime-main.78923e75.js",
     "static/css/2.1bd2ab2f.chunk.css",
     "static/js/2.48f12264.chunk.js",
     "static/css/main.1144c280.chunk.css",
-    "static/js/main.ac28f14b.chunk.js"
+    "static/js/main.7debfbb3.chunk.js"
   ]
 }
