@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b23e26080482c218142b90daa6462ff0",
+    "revision": "54818ecc9b6790ee86ba5fc2b508dc8e",
     "url": "/Wanderion/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wanderion/static/css/2.1bd2ab2f.chunk.css"
   },
   {
-    "revision": "126473fe2d1c90b05408",
+    "revision": "578a5047d06e61734c2e",
     "url": "/Wanderion/static/css/main.1144c280.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wanderion/static/js/2.48f12264.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "126473fe2d1c90b05408",
-    "url": "/Wanderion/static/js/main.7debfbb3.chunk.js"
+    "revision": "578a5047d06e61734c2e",
+    "url": "/Wanderion/static/js/main.6af4d6b7.chunk.js"
   },
   {
     "revision": "71adac5e7f37f9df19df",
