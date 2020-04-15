@@ -95,4 +95,4 @@ class DetailBlog extends React.Component {
   }
 }
 
-export default ArticleCard;
+export default DetailBlog;
