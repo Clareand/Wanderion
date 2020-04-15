@@ -2,7 +2,7 @@
   "name": "web_3",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://Clareand.github.io",
+  "homepage": "https://Clareand.github.io/Wanderion",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
