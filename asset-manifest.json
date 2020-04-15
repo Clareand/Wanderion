@@ -1,29 +1,23 @@
 {
   "files": {
-    "main.css": "/Wanderion/static/css/main.1144c280.chunk.css",
-    "main.js": "/Wanderion/static/js/main.6af4d6b7.chunk.js",
-    "main.js.map": "/Wanderion/static/js/main.6af4d6b7.chunk.js.map",
+    "main.css": "/Wanderion/static/css/main.42639e65.chunk.css",
+    "main.js": "/Wanderion/static/js/main.b9a1cd0f.chunk.js",
+    "main.js.map": "/Wanderion/static/js/main.b9a1cd0f.chunk.js.map",
     "runtime-main.js": "/Wanderion/static/js/runtime-main.78923e75.js",
     "runtime-main.js.map": "/Wanderion/static/js/runtime-main.78923e75.js.map",
-    "static/css/2.1bd2ab2f.chunk.css": "/Wanderion/static/css/2.1bd2ab2f.chunk.css",
-    "static/js/2.48f12264.chunk.js": "/Wanderion/static/js/2.48f12264.chunk.js",
-    "static/js/2.48f12264.chunk.js.map": "/Wanderion/static/js/2.48f12264.chunk.js.map",
+    "static/js/2.c581f2cf.chunk.js": "/Wanderion/static/js/2.c581f2cf.chunk.js",
+    "static/js/2.c581f2cf.chunk.js.map": "/Wanderion/static/js/2.c581f2cf.chunk.js.map",
     "index.html": "/Wanderion/index.html",
-    "precache-manifest.b462ed88cc10db06e7988aff3c150cd1.js": "/Wanderion/precache-manifest.b462ed88cc10db06e7988aff3c150cd1.js",
+    "precache-manifest.0e07ac0050ef6dfe79dc17f6100f8c1a.js": "/Wanderion/precache-manifest.0e07ac0050ef6dfe79dc17f6100f8c1a.js",
     "service-worker.js": "/Wanderion/service-worker.js",
-    "static/css/2.1bd2ab2f.chunk.css.map": "/Wanderion/static/css/2.1bd2ab2f.chunk.css.map",
-    "static/css/main.1144c280.chunk.css.map": "/Wanderion/static/css/main.1144c280.chunk.css.map",
-    "static/js/2.48f12264.chunk.js.LICENSE.txt": "/Wanderion/static/js/2.48f12264.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/Wanderion/static/media/logo.ee7cd8ed.svg",
-    "static/media/magic-wand.png": "/Wanderion/static/media/magic-wand.1d583ddf.png",
-    "static/media/orion-hand.jpg": "/Wanderion/static/media/orion-hand.3cc457d7.jpg",
-    "static/media/telescope.png": "/Wanderion/static/media/telescope.860e021f.png"
+    "static/css/main.42639e65.chunk.css.map": "/Wanderion/static/css/main.42639e65.chunk.css.map",
+    "static/js/2.c581f2cf.chunk.js.LICENSE.txt": "/Wanderion/static/js/2.c581f2cf.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Wanderion/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.78923e75.js",
-    "static/css/2.1bd2ab2f.chunk.css",
-    "static/js/2.48f12264.chunk.js",
-    "static/css/main.1144c280.chunk.css",
-    "static/js/main.6af4d6b7.chunk.js"
+    "static/js/2.c581f2cf.chunk.js",
+    "static/css/main.42639e65.chunk.css",
+    "static/js/main.b9a1cd0f.chunk.js"
   ]
 }
