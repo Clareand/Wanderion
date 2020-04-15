@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Header from "./Header";
 import Blog from "./Blog";
+import BlogDetail from "./BlogDetail";
 
 //install bootstrap dulu
 import './bootstrap/dist/css/bootstrap.min.css';
@@ -21,7 +22,7 @@ function App() {
           <Route path="/about">
             About
           </Route>
-          <Route path="/blog/:articleId" component={Blog} />
+          <Route path="/blog/:articleId" component={BlogDetail} />
           <Route path="/blog">
             <Blog />
           </Route>
