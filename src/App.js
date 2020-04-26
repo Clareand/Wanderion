@@ -1,37 +1,18 @@
-import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
-import Header from "./Header";
-import Blog from "./Blog";
-import BlogDetail from "./BlogDetail";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Routing from './router/router.js';
+import Header from './content/layout/Header.js';
 
-//install bootstrap dulu
-import './bootstrap/dist/css/bootstrap.min.css';
-
-// Ini merupakan functional component
-// https://getbootstrap.com/docs/4.4/examples/navbar-static/
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path="/about">
-            About
-          </Route>
-          <Route path="/blog/:articleId" component={BlogDetail} />
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/">
-            Home
-          </Route>
-        </Switch>
+class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <Header/>
+        <Routing />
       </div>
-    </BrowserRouter>
-  );
+    );
+  }
 }
+
 export default App;
