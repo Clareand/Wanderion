@@ -38,9 +38,16 @@ class Header extends React.Component {
                 <span className="submenu-title-wrapper">More From Us</span>
               }
             >
-              <Menu.ItemGroup title="Service">
-                <Menu.Item key="setting:1">Prints</Menu.Item>
-                <Menu.Item key="setting:2">Phone Case</Menu.Item>
+              <Menu.ItemGroup title="Order">
+                <Menu.Item key="order:1">
+                  <Link to="/check">Cancel/Changes</Link>
+                </Menu.Item>
+              </Menu.ItemGroup>
+              <Menu.ItemGroup title="Design">
+                <Menu.Item key="design:1">All Design</Menu.Item>
+                <Menu.Item key="design:2">
+                  <Link to="/moonPhase">Moon Phase</Link>
+                </Menu.Item>
               </Menu.ItemGroup>
             </SubMenu>
           </Menu>

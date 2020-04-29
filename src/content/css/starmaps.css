@@ -74,6 +74,7 @@
 
 .card-feature{
     margin: 2% 5% 2%;
+    padding-left: 10vh !important;
 }
 
 .card-content img{

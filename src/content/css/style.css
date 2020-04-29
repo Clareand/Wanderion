@@ -1,0 +1,84 @@
+@import '~antd/dist/antd.css';
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 500px;
+}
+#components-layout-demo-top .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.layout{
+  background: #fff;
+}
+
+/* Font */
+
+.big-blue{
+  color:#000053;
+  font-size: 8vh;
+  font-weight: bold;
+}
+
+.sm-blue{
+  color:#000042;
+  font-size: 3vh;
+}
+
+.md-blue{
+  color:#000042;
+  font-size: 5vh;
+}
+
+.md-black{
+    font-size: 12pt;
+}
+
+/* /Font */
+
+/* image */
+
+.center{
+    margin: 18px auto;
+    text-align: center;
+}
+
+/* /image */
+
+/* container */
+
+.form{
+  border: radius 0 ;
+  border: 1px #000053 solid;
+}
+
+
+.input-line{
+  margin:3vh 0vh;
+}
+
+.form-center{
+  padding-left: 10vh;
+}
+
+.card-img{
+  text-align: center;
+}
+.card-img .-title{
+  font-size: 18pt;
+  font-weight: bold;
+  color: #000053;
+}
+
+.bg-input{
+  width: 70vh;
+  border: none ;
+  border-bottom: 3px #000053 solid;
+  text-align: center;
+  font-size: 30pt;
+}
+/* /container */
