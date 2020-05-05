@@ -11,6 +11,7 @@ function CardImg({
   text2,
   alt,
   content,
+  width
 
 }) {
   return (
@@ -26,7 +27,7 @@ function CardImg({
       }
     >
       <Meta title={title} description={text1} />
-      <di>{content}</di>
+      <div>{content}</div>
     </Card>
   );
 }

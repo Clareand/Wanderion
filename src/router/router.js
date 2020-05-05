@@ -5,6 +5,9 @@ import Starmaps from './../content/component/Starmaps';
 import Order from './../content/component/Order';
 import Check from "./../content/component/CheckOrder";
 import MoonPhase from "./../content/component/MoonPhase";
+import Summary from "./../content/component/SummaryOrder";
+import Info from './../content/component/OrderInfo';
+import Checkout from './../content/component/Checkout';
 class Router extends Component {
     render() {
         return (
@@ -14,6 +17,9 @@ class Router extends Component {
             <Route path="/order" component={Order} />
             <Route path="/check" component={Check} />
             <Route path="/moonPhase" component={MoonPhase} />
+            <Route path="/summary" component={Summary} />
+            <Route path="/info" component={Info}/>
+            <Route path="/checkout" component={Checkout} />
           </Switch>
         );
     }

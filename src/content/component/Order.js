@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col, Input, Select, AutoComplete,DatePicker, Radio, TimePicker } from "antd";
 import CardImg from "./../layout/CardImg";
+import ButtonLink from './../layout/ButtonLink.js';
 import './../css/style.css';
 import moment from "moment";
 const { Content, Footer } = Layout; 
@@ -277,14 +278,28 @@ class Order extends Component {
                               </div>
                             </Col>
                           </Row>
-                          <div></div>
                         </Col>
                       </Row>
                     </div>
                   </Col>
                 </Row>
               </form>
+              <Row className="section-container">
+                <Col lg={24}>
+                  <div className="big-blue title-maps-container">
+                    <ButtonLink
+                      text="Next"
+                      background="#000053"
+                      className='btn-md-blue'
+                      href='/checkout'
+                    />
+                  </div>
+                </Col>
+              </Row>
             </Content>
+            <Footer className=" starmaps starmaps-footer">
+              Wanderion Starmaps ©2020
+            </Footer>
           </Layout>
         );
     }

@@ -24,6 +24,12 @@
   font-weight: bold;
 }
 
+.md-blue-bold{
+  color:#000042;
+  font-size: 6vh;
+  font-weight: bold;
+}
+
 .sm-blue{
   color:#000042;
   font-size: 3vh;
@@ -36,6 +42,15 @@
 
 .md-black{
     font-size: 12pt;
+}
+
+.sm-red{
+  color:#bf1f2f;
+  font-size: 3vh;
+}
+
+.text-right{
+  text-align: right;
 }
 
 /* /Font */
@@ -52,14 +67,46 @@
 /* container */
 
 .form{
-  border: radius 0 ;
-  border: 1px #000053 solid;
+  border-radius: 5px;
+  border: 1px #e8e8ff solid;
 }
 
-
-.input-line{
-  margin:3vh 0vh;
+.form input {
+  font-size: 20pt;
 }
+.form.ant-input:placeholder-shown {
+    text-overflow: ellipsis;
+    box-shadow:0px 0px 0px 0px rgb(33, 32, 115), 0px 0px 2px 0 rgba(30, 41, 172, 0.12), -1px 1px 8px 1px rgba(0, 0, 0, 0.09);
+}
+
+.form.ant-input:focus, .ant-input-focused {
+    border-color: #9c9ccf;
+}
+
+.ant-picker.input-line{
+  border: #000053 1px solid;
+}
+
+.ant-picker.input-line{
+  border: #000053 1px solid;
+  width: 100%;
+}
+
+.input-line .ant-picker-input > input:placeholder-shown{
+  font-size: 15pt;
+}
+
+.input-line .ant-picker-input> input:focus{
+  font-size: 15pt;  
+}
+
+.input-line .ant-picker-input> input:focus{
+  font-size: 15pt;  
+}
+.input-line .ant-picker-input>input{
+  font-size: 15pt;  
+}
+
 
 .form-center{
   padding-left: 10vh;
@@ -68,10 +115,28 @@
 .card-img{
   text-align: center;
 }
+.card-img img{
+  max-width: 70%;
+  margin:16px auto;
+}
+
+.moon {
+ box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09); 
+}
+
+.moon .ant-card-body{
+  border-top: solid 1px #000042;
+}
+
 .card-img .-title{
   font-size: 18pt;
   font-weight: bold;
   color: #000053;
+  margin-bottom: 0em !important;
+}
+.card-img .-text{
+  font-size: 14pt;
+  margin-bottom: 0em !important;
 }
 
 .bg-input{
@@ -81,4 +146,54 @@
   text-align: center;
   font-size: 30pt;
 }
+
+.content-datepicker{
+    margin: 2% 5% 2%;
+    text-align: justify;
+}
+
+.btn-find{
+  font-size: 18px;
+  height: 53px;
+  width: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-bg-blue{
+  font-size: 25px;
+  height: 70px;
+  width: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-md-blue{
+  font-size: 18px;
+  height: 50px;
+  width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-col-center{
+  margin: 16px auto;
+}
+
+.br-div{
+  height: 20vh;
+}
+
+.content-summary-container{
+  margin: 2% 5% 2%;
+  text-align: center;
+}
+
 /* /container */
+
+/* Table */
+th.column-price,
+td.column-price {
+  text-align: right !important;
+}
+/* /Table */

@@ -5,7 +5,7 @@ function ButtonLink({
     type, text, disabled, borderRadius = 25,
     background = '#4D5AF2', textColor = "white", border = 'none',
     margin = '0px', marginLeft, marginRight, marginTop, marginBottom,
-    className, onClick,icon,href
+    className, onClick,icon,href,htmlType
 })
     {
         return (
@@ -27,6 +27,7 @@ function ButtonLink({
                     onClick={onClick}
                     icon={icon}
                     href={href}
+                    htmlType={htmlType}
                 >
                     {text}
                 </Button>

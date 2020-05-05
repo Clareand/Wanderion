@@ -40,6 +40,9 @@ class Header extends React.Component {
             >
               <Menu.ItemGroup title="Order">
                 <Menu.Item key="order:1">
+                  <Link to="/check">Find</Link>
+                </Menu.Item>
+                <Menu.Item key="order:1">
                   <Link to="/check">Cancel/Changes</Link>
                 </Menu.Item>
               </Menu.ItemGroup>

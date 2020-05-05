@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import './../css/style.css';
 import { Layout, Row, Col, Input } from 'antd';
+import ButtonLink from './../layout/ButtonLink.js';
 const { Content, Footer } = Layout; 
 class CheckOrder extends Component {
+  state = {
+    user: ''
+  };
+  handleChange = (event) => {
+    const input = event.target; 
+    const value = input.value;
+    this.setState({ [input.name]: value });
+  };
+  handleFormSubmit = () => { 
+    const { user } = this.state;
+    localStorage.setItem('user', user);
+  };
     render() {
         return (
           <Layout className="layout">
@@ -19,11 +32,21 @@ class CheckOrder extends Component {
                   </div>
                 </Col>
               </Row>
-              <form>
+              <form onSubmit={this.handleFormSubmit} action="/info">
                 <Row>
                   <Col lg={24}>
                     <div className="title-maps-container">
-                      <Input placeholder="Enter your Code Here" className="bg-input"/>
+                      <Input name="user" placeholder="Enter your Code Here" className="bg-input" value={this.state.user} onChange={this.handleChange}/>
+                    </div>
+                  </Col>
+                  <Col lg={24}>
+                    <div className="title-maps-container">
+                      <ButtonLink
+                        text="Find Order!"
+                        background="#000053"
+                        className='btn-bg-blue'
+                        htmlType='submit'
+                      />
                     </div>
                   </Col>
                 </Row>
