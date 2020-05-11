@@ -111,7 +111,7 @@ class Starmaps extends Component {
                 </Col>
               </Row>
             </Content>
-            <Footer className=" starmaps starmaps-footer">
+            <Footer className="starmaps starmaps-footer">
               Wanderion Starmaps ©2020
             </Footer>
           </Layout>

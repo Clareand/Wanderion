@@ -44,6 +44,10 @@
     font-size: 12pt;
 }
 
+.sm-black{
+  font-size: 10px;
+}
+
 .sm-red{
   color:#bf1f2f;
   font-size: 3vh;
@@ -51,6 +55,16 @@
 
 .text-right{
   text-align: right;
+}
+
+.sm-bold{
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.lg-bold{
+  font-size: 22pt;
+  font-weight: bold;
 }
 
 /* /Font */
@@ -132,8 +146,12 @@
   font-size: 18pt;
   font-weight: bold;
   color: #000053;
+}
+
+.space{
   margin-bottom: 0em !important;
 }
+
 .card-img .-text{
   font-size: 14pt;
   margin-bottom: 0em !important;
@@ -189,6 +207,56 @@
   text-align: center;
 }
 
+.wrap{
+  white-space: normal !important;
+}
+
+.non-justify{
+  text-align: left !important;
+}
+
+.maps-box{
+  width: 90%;
+  height: 60vh;
+}
+
+.maps-box-text{
+  margin: 20px auto 10px auto;
+  text-align: center;
+  width: 200px;
+}
+.upper{
+  margin: 0px auto 15px auto;
+}
+.circle{
+  width: 200px;
+  height: 200px;
+  background-color: #000000;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.row-detail{
+  margin : 20px 0 20px 0;
+}
+
+.bg-gray{
+  background-color: #f4f4f4;
+}
+
+.box-detail{
+  width: 500px;
+  height: 170px;
+  border-radius: 10px;
+  background-color:#01016e;
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+}
+.empty{
+  height: 20px;
+}
+
 /* /container */
 
 /* Table */
@@ -197,3 +265,16 @@ td.column-price {
   text-align: right !important;
 }
 /* /Table */
+
+/* Border */
+
+.border-thick{
+  border: #9d9d9e solid;
+  border-width: 2px 0px;
+}
+.border-thick-black{
+  border:2px #000000 solid;
+  background-color: #fff;
+}
+
+/* /Border */

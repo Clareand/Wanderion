@@ -128,19 +128,17 @@ class MoonPhase extends Component {
                     </form>
                   </div>
                 </Col>
-                {/* {moon.map(data => ( */}
                 <Col span={8}>
                   <CardImg
                     hoverable={true}
                     image={path}
                     alt="image"
                     className="card-img moon"
-                    title={<p className="-title">{this.state.phase}</p>}
+                    title={<p className="-title space">{this.state.phase}</p>}
                     text1={<p className="-text">{this.state.dateNow}</p>}
                     bordered={false}
                   />
                 </Col>
-                {/* ))} */}
                 <Col span={8}></Col>
               </Row>
             </Col>
