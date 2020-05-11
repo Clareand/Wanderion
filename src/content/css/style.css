@@ -1,0 +1,280 @@
+@import '~antd/dist/antd.css';
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 500px;
+}
+#components-layout-demo-top .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.layout{
+  background: #fff;
+}
+
+/* Font */
+
+.big-blue{
+  color:#000053;
+  font-size: 8vh;
+  font-weight: bold;
+}
+
+.md-blue-bold{
+  color:#000042;
+  font-size: 6vh;
+  font-weight: bold;
+}
+
+.sm-blue{
+  color:#000042;
+  font-size: 3vh;
+}
+
+.md-blue{
+  color:#000042;
+  font-size: 5vh;
+}
+
+.md-black{
+    font-size: 12pt;
+}
+
+.sm-black{
+  font-size: 10px;
+}
+
+.sm-red{
+  color:#bf1f2f;
+  font-size: 3vh;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.sm-bold{
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.lg-bold{
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+/* /Font */
+
+/* image */
+
+.center{
+    margin: 18px auto;
+    text-align: center;
+}
+
+/* /image */
+
+/* container */
+
+.form{
+  border-radius: 5px;
+  border: 1px #e8e8ff solid;
+}
+
+.form input {
+  font-size: 20pt;
+}
+.form.ant-input:placeholder-shown {
+    text-overflow: ellipsis;
+    box-shadow:0px 0px 0px 0px rgb(33, 32, 115), 0px 0px 2px 0 rgba(30, 41, 172, 0.12), -1px 1px 8px 1px rgba(0, 0, 0, 0.09);
+}
+
+.form.ant-input:focus, .ant-input-focused {
+    border-color: #9c9ccf;
+}
+
+.ant-picker.input-line{
+  border: #000053 1px solid;
+}
+
+.ant-picker.input-line{
+  border: #000053 1px solid;
+  width: 100%;
+}
+
+.input-line .ant-picker-input > input:placeholder-shown{
+  font-size: 15pt;
+}
+
+.input-line .ant-picker-input> input:focus{
+  font-size: 15pt;  
+}
+
+.input-line .ant-picker-input> input:focus{
+  font-size: 15pt;  
+}
+.input-line .ant-picker-input>input{
+  font-size: 15pt;  
+}
+
+
+.form-center{
+  padding-left: 10vh;
+}
+
+.card-img{
+  text-align: center;
+}
+.card-img img{
+  max-width: 70%;
+  margin:16px auto;
+}
+
+.moon {
+ box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09); 
+}
+
+.moon .ant-card-body{
+  border-top: solid 1px #000042;
+}
+
+.card-img .-title{
+  font-size: 18pt;
+  font-weight: bold;
+  color: #000053;
+}
+
+.space{
+  margin-bottom: 0em !important;
+}
+
+.card-img .-text{
+  font-size: 14pt;
+  margin-bottom: 0em !important;
+}
+
+.bg-input{
+  width: 70vh;
+  border: none ;
+  border-bottom: 3px #000053 solid;
+  text-align: center;
+  font-size: 30pt;
+}
+
+.content-datepicker{
+    margin: 2% 5% 2%;
+    text-align: justify;
+}
+
+.btn-find{
+  font-size: 18px;
+  height: 53px;
+  width: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-bg-blue{
+  font-size: 25px;
+  height: 70px;
+  width: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-md-blue{
+  font-size: 18px;
+  height: 50px;
+  width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-col-center{
+  margin: 16px auto;
+}
+
+.br-div{
+  height: 20vh;
+}
+
+.content-summary-container{
+  margin: 2% 5% 2%;
+  text-align: center;
+}
+
+.wrap{
+  white-space: normal !important;
+}
+
+.non-justify{
+  text-align: left !important;
+}
+
+.maps-box{
+  width: 90%;
+  height: 60vh;
+}
+
+.maps-box-text{
+  margin: 20px auto 10px auto;
+  text-align: center;
+  width: 200px;
+}
+.upper{
+  margin: 0px auto 15px auto;
+}
+.circle{
+  width: 200px;
+  height: 200px;
+  background-color: #000000;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.row-detail{
+  margin : 20px 0 20px 0;
+}
+
+.bg-gray{
+  background-color: #f4f4f4;
+}
+
+.box-detail{
+  width: 500px;
+  height: 170px;
+  border-radius: 10px;
+  background-color:#01016e;
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+}
+.empty{
+  height: 20px;
+}
+
+/* /container */
+
+/* Table */
+th.column-price,
+td.column-price {
+  text-align: right !important;
+}
+/* /Table */
+
+/* Border */
+
+.border-thick{
+  border: #9d9d9e solid;
+  border-width: 2px 0px;
+}
+.border-thick-black{
+  border:2px #000000 solid;
+  background-color: #fff;
+}
+
+/* /Border */

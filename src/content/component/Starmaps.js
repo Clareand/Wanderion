@@ -7,7 +7,7 @@ const { Content, Footer } = Layout;
 const feature=[
   {
         image: require('./../../assets/icon/magic-wand.png'),
-        text: 'Every maps design can be added by your own words or notes. Each of maps  is unique, like you',
+        text: 'Every maps design can be added by your own words or notes. Each of maps  is unique, just like you',
         title: 'Personalized'
   }  
   ,{
@@ -17,7 +17,7 @@ const feature=[
     },
   {
         image: require('./../../assets/icon/box.png'),
-        text: 'We carefully ship your maps with beautiful and solid packaging, so your maps would be safe',
+        text: 'We carefully ship your maps with beautiful and solid packaging, making sure it safe to your hand',
         title:'Packaging'
   }
  
@@ -111,7 +111,7 @@ class Starmaps extends Component {
                 </Col>
               </Row>
             </Content>
-            <Footer className=" starmaps starmaps-footer">
+            <Footer className="starmaps starmaps-footer">
               Wanderion Starmaps ©2020
             </Footer>
           </Layout>

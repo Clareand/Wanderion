@@ -4,6 +4,7 @@ import './../css/Home.css';
 import Header from './../layout/Header.js';
 import ButtonLink from './../layout/ButtonLink.js';
 import { InstagramOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 const { Content, Footer } = Layout;
 class Home extends React.Component {
     render() {
@@ -53,7 +54,7 @@ class Home extends React.Component {
                                                 marginLeft={16}
                                                 border="1px solid #000053"
                                                 className='button-link'
-                                                href='https://wa.me/628988266135'
+                                                href='/order'
                                             />
                                         </div>
                                     </Col>
@@ -66,5 +67,5 @@ class Home extends React.Component {
         );
     }
 }
-// end
+
 export default Home;
