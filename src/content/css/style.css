@@ -40,6 +40,11 @@
   font-size: 5vh;
 }
 
+.md-md-blue{
+  color:#000042;
+  font-size: 4vh;
+}
+
 .md-black{
     font-size: 12pt;
     color: #000000;
@@ -98,6 +103,10 @@
     border-color: #9c9ccf;
 }
 
+.form-space{
+  padding-bottom: 10px;
+}
+
 .ant-picker.input-line{
   border: #000053 1px solid;
 }
@@ -116,8 +125,9 @@
 }
 
 .input-line .ant-picker-input> input:focus{
-  font-size: 15pt;  
+  font-size: 15pt; 
 }
+
 .input-line .ant-picker-input>input{
   font-size: 15pt;  
 }
