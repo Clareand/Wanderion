@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Row, Col, Input, Select, AutoComplete,DatePicker, Radio, TimePicker } from "antd";
+import { Layout, Row, Col, Input, Select, AutoComplete, DatePicker, Radio, TimePicker, Steps } from "antd";
 import CardImg from "./../layout/CardImg";
 import ButtonLink from './../layout/ButtonLink.js';
 import './../css/style.css';
@@ -8,6 +8,7 @@ import axios from 'axios';
 const { Content, Footer } = Layout; 
 const { Option } = Select;
 const { TextArea } = Input;
+const { Step } = Steps;
 
 const Design = [
   {
@@ -150,12 +151,12 @@ class Order extends Component {
                 <Row>
                   <Col lg={24}>
                     <div className="content-maps-container md-black">
-                      <p className="sm-blue">1. Self Identity</p>
+                      <p className="md-md-blue">1. Self Identity</p>
                       <Row gutter={[24]}>
                         <Col span={1}></Col>
                         <Col span={10}>
                           <div>
-                            <div className="input-line">
+                            <div className="input-line form-space">
                               <label>Name</label>
                               <Input
                                 value={this.state.name}
@@ -165,7 +166,7 @@ class Order extends Component {
                                 name="name"
                               />
                             </div>
-                            <div className="input-line">
+                            <div className="input-line form-space">
                               <label>Email</label>
                               <Input
                                 value={this.state.email}
@@ -175,7 +176,7 @@ class Order extends Component {
                                 onChange={this.handleChange}
                               />
                             </div>
-                            <div className="input-line">
+                            <div className="input-line form-space">
                               <label>Phone</label>
                               <Input
                                 value={this.state.phone}
@@ -185,7 +186,7 @@ class Order extends Component {
                                 onChange={this.handleChange}
                               />
                             </div>
-                            <div className="input-line">
+                            <div className="input-line form-space">
                               <label>City</label>
                               <div>
                                 <Input.Group>
@@ -216,7 +217,7 @@ class Order extends Component {
                         </Col>
                         <Col span={2}></Col>
                         <Col span={10}>
-                          <div className="input-line">
+                          <div className="input-line form-space">
                             <label>Address</label>
                             <TextArea
                               value={this.state.address}
@@ -227,7 +228,7 @@ class Order extends Component {
                               onChange={this.handleChange}
                             />
                           </div>
-                          <div className="input-line non-justify">
+                          <div className="input-line form-space non-justify">
                             <label>Postal Code</label>
                             <Input
                               value={this.state.postal_code}
@@ -243,7 +244,7 @@ class Order extends Component {
                   </Col>
                   <Col lg={24}>
                     <div className="content-maps-container md-black">
-                      <p className="sm-blue">2. Choose Design</p>
+                      <p className="md-md-blue">2. Choose Design</p>
                       <div className="form-center">
                         <Radio.Group className="wrap" name="design" value={this.state.design} onChange={this.handleChange}>
                           <Row gutter={[48, 16]}>
@@ -269,12 +270,13 @@ class Order extends Component {
                   </Col>
                   <Col lg={24}>
                     <div className="content-maps-container md-black">
-                      <p className="sm-blue">3. Detail Order</p>
+                      <p className="md-md-blue">3. Detail Order</p>
                       <Row gutter={[24]}>
-                        <Col span={12}>
+                        <Col span={1}></Col>
+                        <Col span={10}>
                           <Row gutter={24}>
-                            <Col lg={12}>
-                              <div className="input-line">
+                            <Col lg={16}>
+                              <div className="input-line form-space">
                                 <label>Coordinate</label>
                                 <Input
                                   value={this.state.coordinate}
@@ -287,8 +289,8 @@ class Order extends Component {
                             </Col>
                           </Row>
                           <Row gutter={[24]}>
-                            <Col span={12}>
-                              <div className="input-line">
+                            <Col lg={16}>
+                              <div className="input-line form-space">
                                 <label>Date</label>
                                 <br />
                                 <DatePicker showTime onChange={this.onChangeDate} value={this.state.dates} onOk={onOk}/>
@@ -311,7 +313,7 @@ class Order extends Component {
                               </div>
                             </Col> */}
                             <Col lg={6}>
-                              <div className="input-line">
+                              <div className="input-line form-space">
                                 <label>Time Format</label>
                                 <br />
                                 <Radio.Group name="time_format" onChange={this.handleChange} value={this.state.time_format}>
@@ -327,7 +329,7 @@ class Order extends Component {
                           </Row>
                           <Row gutter={[24]}>
                             <Col lg={6}>
-                              <div className="input-line">
+                              <div className="input-line form-space">
                                 <label>Moon Phase</label>
                                 <br />
                                 <Radio.Group name="moon" onChange={this.handleChange} value={this.state.moon}>
@@ -337,7 +339,7 @@ class Order extends Component {
                               </div>
                             </Col>
                             <Col lg={6}>
-                              <div className="input-line">
+                              <div className="input-line form-space">
                                 <label>Galaxy Image</label>
                                 <br />
                                 <Radio.Group name="galaxy" onChange={this.handleChange} value={this.state.galaxy}>
@@ -348,8 +350,9 @@ class Order extends Component {
                             </Col>
                           </Row>
                         </Col>
-                        <Col span={12}>
-                          <div className="input-line non-justify">
+                        <Col span={2}></Col>
+                        <Col span={10}>
+                          <div className="input-line form-space non-justify">
                             <label>Text 1</label>
                             <TextArea
                               value={this.state.text_1}
@@ -360,7 +363,7 @@ class Order extends Component {
                               onChange={this.handleChange}
                             />
                           </div>
-                          <div className="input-line non-justify">
+                          <div className="input-line form-space non-justify">
                             <label>Text 2</label>
                             <TextArea
                               value={this.state.text_2}
@@ -371,7 +374,7 @@ class Order extends Component {
                               onChange={this.handleChange}
                             />
                           </div>
-                          <div className="input-line non-justify">
+                          <div className="input-line form-space non-justify">
                             <label>Text 3</label>
                             <TextArea
                               value={this.state.text_3}
