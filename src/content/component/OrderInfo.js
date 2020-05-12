@@ -11,7 +11,7 @@ export default class OrderInfo extends Component {
                  state = {
                    persons: [],
                    status: [],
-                   order:[]
+                   order:[],
                  };
                  componentDidMount() {
                    const user = localStorage.getItem("user");
@@ -21,12 +21,45 @@ export default class OrderInfo extends Component {
                        // console.log(res.data);
                        const status = res.data.status;
                        const persons = Object.assign({},res.data.result);
-                       const merged = Object.assign(persons[0],persons[0].user)
                        this.setState({ persons: persons[0], status: status });
+                       this.state.persons.name = this.state.persons.user.name
+                       this.state.persons.email = this.state.persons.user.email
+                       this.state.persons.phone = this.state.persons.user.phone
+                       this.state.persons.address = this.state.persons.user.address
+                       this.state.persons.postal_code = this.state.persons.user.postal_code
+                       this.state.persons.id_city = this.state.persons.user.id_city
                        delete this.state.persons.user
                        localStorage.setItem("order", JSON.stringify(this.state.persons));
                      });
+                   const moment = require("moment");
+                   this.state.dates = moment(this.state.persons.created_at).format("dddd, MMMM Do YYYY");
+                   this.design(this.state.persons.design)
+                   this.galaxy(this.state.persons.galaxy)
+                   this.moon(this.state.persons.moon)
                  }
+                  design(data) {
+                    if (data == 0) {
+                      this.state.design = "All Black Starmaps"
+                    } else if (data == 1) {
+                      this.state.design = "Black on White Starmaps"
+                    } else {
+                      this.state.design = "White on Black Starmaps"
+                    }
+                  }
+                  moon(data) {
+                    if (data == 0) {
+                      this.state.moon = "No"
+                    } else {
+                      this.state.moon = "Yes"
+                    } 
+                  }
+                  galaxy(data) {
+                    if (data == 0) {
+                      this.state.galaxy = "No"
+                    } else{
+                      this.state.galaxy = "Yes"
+                    } 
+                  }
                  showConfirm() {
                    confirm({
                      title: "Do you Want to delete these Order?",
@@ -34,9 +67,12 @@ export default class OrderInfo extends Component {
                      onOk() {
                        const user = localStorage.getItem("user");
                        axios
-                         .get("http://localhost:8000/api/user/cancel" + user)
+                         .get("http://localhost:8000/api/user/cancel/" + user)
                          .then(res => {
-                             if(res.data=="success"){
+                           console.log(res.data.status);
+                             if(res.data.status==="success"){
+                                localStorage.removeItem('order')
+                                localStorage.removeItem('user')
                                 history.push("/");
                                 window.location.reload(true);
                              }
@@ -48,17 +84,16 @@ export default class OrderInfo extends Component {
                    });
                  }
                  handleChange(){
-                    history.push("/update");
+                    history.push("/change");
                     window.location.reload(true);
                  }
                  render() {
-                    console.log(this.state.persons);
+                   console.log('a',this.state.persons.name);
                    const notFound = require(`../../assets/img/404.png`);
                    let layout;
                    if (this.state.status === "success") {
                      layout = (
                        <Content style={{ overflow: "hidden" }}>
-                         {/* {this.state.persons.user.map(persons => ( */}
                            <Row className="section-container">
                              <Col lg={24}>
                                <div className="big-blue title-maps-container">
@@ -67,7 +102,7 @@ export default class OrderInfo extends Component {
                              </Col>
                              <Col lg={24}>
                                <div className="sm-blue desc-maps-container">
-                                 Dear, {this.state.persons.name} here's your order
+                                 Dear, {this.state.persons.user.name} here's your order
                                  information
                                </div>
                              </Col>
@@ -105,7 +140,7 @@ export default class OrderInfo extends Component {
                                        <Row>
                                          <div>
                                            Time Order:
-                                           <p>{this.state.persons.created_at}</p>
+                                           <p>{this.state.dates}</p>
                                            <br />
                                          </div>
                                        </Row>
@@ -114,13 +149,13 @@ export default class OrderInfo extends Component {
                                            Shipping To :
                                            <p>
                                              <br />
-                                             {this.state.persons.name}
+                                             {this.state.persons.user.name}
                                              <br />
-                                             {this.state.persons.address}
+                                             {this.state.persons.user.address}
                                              <br />
-                                             {this.state.persons.email}
+                                             {this.state.persons.user.email}
                                              <br />
-                                             {this.state.persons.phone}
+                                             {this.state.persons.user.phone}
                                            </p>
                                          </div>
                                        </Row>
@@ -190,19 +225,19 @@ export default class OrderInfo extends Component {
                                        <Row>
                                          <div>
                                            Design:
-                                           <p>{this.state.persons.design}</p>
+                                           <p>{this.state.design}</p>
                                          </div>
                                        </Row>
                                        <Row>
                                          <div>
                                            Galaxy On Maps
-                                           <p>{this.state.persons.galaxy}</p>
+                                           <p>{this.state.galaxy}</p>
                                          </div>
                                        </Row>
                                        <Row>
                                          <div>
                                            Moon On Maps
-                                           <p>{this.state.persons.moon}</p>
+                                           <p>{this.state.moon}</p>
                                          </div>
                                        </Row>
                                      </Col>
@@ -219,7 +254,6 @@ export default class OrderInfo extends Component {
                                  </div>
                                </Col>
                            </Row>
-                         ))}
                          <Row className="section-container">
                            <Col lg={3}></Col>
                            <Col lg={6}>

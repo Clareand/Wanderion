@@ -168,23 +168,23 @@ export default class Checkout2 extends Component {
   handleFormSubmit = () => {
     this.state.step1.price = this.state.total;
     const data = this.state.step1;
-    console.log(data);
-    axios.post(`http://localhost:8000/api/user/store`, data).then(res => {
+    const code = data.order_code;
+    axios.post(`http://localhost:8000/api/user/update/`+code , data).then(res => {
       console.log("x", res);
       if (res.data.status === "fail") {
-        history.push("/checkout");
+        history.push("/confirmChange");
         console.log("x", res);
       } else {
-        let order = res.data.result;
-        localStorage.setItem("order", JSON.stringify(order));
+        localStorage.setItem("order", JSON.stringify(data));
         localStorage.removeItem("step-1");
-        history.push("/summary");
+        history.push("/ChangeSum");
         window.location.reload(true);
       }
     });
   };
   componentWillMount() {
-    let data = JSON.parse(localStorage.getItem("step-1"));
+    let data = JSON.parse(localStorage.getItem("order"));
+    console.log(data);
     if (data === null) {
       history.push("/notFound");
       window.location.reload(true);
@@ -236,12 +236,13 @@ export default class Checkout2 extends Component {
               </div>
             </Col>
           </Row>
-          <form onSubmit={this.handleFormSubmit}>
+          <form>
+            {/* onSubmit={this.handleFormSubmit} */}
             <Row className="section-container">
               <Col lg={24}>
                 <div className="big-blue title-maps-container">
                   <ButtonLink
-                    text="Checkout"
+                    text="Confirm"
                     background="#000053"
                     className="btn-md-blue"
                     onClick={this.handleFormSubmit}

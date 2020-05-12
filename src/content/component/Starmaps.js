@@ -3,6 +3,9 @@ import { Layout, Row, Col } from 'antd';
 import './../css/starmaps.css';
 import CardFeature from './../layout/CardFeature';
 import Counter from './../layout/Counter';
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import axios from "axios";
 const { Content, Footer } = Layout; 
 const feature=[
   {
@@ -22,15 +25,61 @@ const feature=[
   }
  
 ]
+
 class Starmaps extends Component {
   state={
-    rate:5
+    rate:5,
+    graph:[]
   }
   handleCounterChange=(newValue)=>{
     this.setState({
       rate:newValue
     })
   }
+  componentWillMount(){
+    
+     axios.get("http://localhost:8000/api/user/best").then(res => {
+       const graph = res.data;
+       this.setState({ graph: graph });
+      //  console.log(graph)
+     });
+  
+  }
+
+  componentDidMount(){
+    // Create chart instance
+    let chart = am4core.create(
+      "chartdiv",
+      am4charts.XYChart
+    );
+
+    // Add data
+    chart.data = this.state.graph
+    console.log('a',chart.data);
+    // Create axes
+    let categoryAxis = chart.xAxes.push(
+      new am4charts.CategoryAxis()
+    );
+    categoryAxis.dataFields.category = "design";
+    categoryAxis.title.text = "Design";
+
+    let valueAxis = chart.yAxes.push(
+      new am4charts.ValueAxis()
+    );
+    valueAxis.title.text = "Amount";
+
+    // Create series
+    let series = chart.series.push(
+      new am4charts.ColumnSeries()
+    );
+    series.dataFields.valueY = "amount";
+    series.dataFields.categoryX = "design";
+    series.name = "Best Seller";
+    series.columns.template.tooltipText =
+      "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
+    series.columns.template.fill = am4core.color("#104547"); // fill
+  }
+ 
     render() {
       const img = require('../../assets/icon/telescope.png');
         return (
@@ -80,23 +129,25 @@ class Starmaps extends Component {
                 </Col>
                 <Col lg={24}>
                   <div className="card-feature">
-                  <Row gutter={[16,16]}>
-                    {feature.map(data =>
-                    <Col span={8}>
-                      <CardFeature
-                        hoverable={true}
-                        image={data.image}
-                        className='card-content'
-                        text1={data.title}
-                        text2={data.text}
-                      />
-                    </Col>
-                    )}
-                  </Row>
+                    <Row gutter={[16, 16]}>
+                      {feature.map(data => (
+                        <Col span={8}>
+                          <CardFeature
+                            hoverable={true}
+                            image={data.image}
+                            className="card-content"
+                            text1={data.title}
+                            text2={data.text}
+                          />
+                        </Col>
+                      ))}
+                    </Row>
                   </div>
                 </Col>
                 <Col lg={24}>
-                  <div className="md-blue title-maps-container">Map Accuracy Rate</div>
+                  <div className="md-blue title-maps-container">
+                    Map Accuracy Rate
+                  </div>
                 </Col>
                 <Col lg={24}>
                   <div className="content-maps-container-mid">
@@ -104,9 +155,20 @@ class Starmaps extends Component {
                     <p className="mid md-blue">{this.state.rate}/5</p>
                   </div>
                 </Col>
-                <Col lg={24}>
+                {/* <Col lg={24}>
                   <div className="counter-container">
                     <Counter onCounterChange={(newValue)=>this.handleCounterChange(newValue)} />
+                  </div>
+                </Col> */}
+                <Col lg={24}>
+                  <div className="md-blue title-maps-container">
+                    Best Sellers
+                  </div>
+                </Col>
+                <Col lg={24}>
+                  <div id="chartdiv"></div>
+                  <div className="md-blue title-maps-container">
+                    Here gonna be graphic
                   </div>
                 </Col>
               </Row>

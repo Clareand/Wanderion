@@ -15,6 +15,7 @@ import ButtonLink from "./../layout/ButtonLink.js";
 import "./../css/style.css";
 import moment from "moment";
 import axios from "axios";
+import { history } from "./../../router/store";
 const { Content, Footer } = Layout;
 const { Option } = Select;
 const { TextArea } = Input;
@@ -51,7 +52,7 @@ class Update extends Component {
   };
   componentDidMount() {
     axios.get("http://localhost:8000/api/city").then(res => {
-    //   console.log(res.data);
+      console.log(res.data);
       const city = res.data.result;
       this.setState({ cities: city });
     });
@@ -74,9 +75,17 @@ class Update extends Component {
     this.setState({ [input.name]: value });
   };
   handleFormSubmit = () => {
+    delete this.state.date
+    const moment = require("moment");
+    let dates = moment(this.state.date).format("YYYY-MM-DD HH:mm:ss");
+    this.setState({ date: dates });
+    this.state.date = dates;
     delete this.state.cities;
     delete this.state.dates;
-    localStorage.setItem("update-1", JSON.stringify(this.state));
+    delete this.state.updated_at
+    localStorage.setItem("order", JSON.stringify(this.state));
+    history.push("/confirmChange");
+    window.location.reload(true);
     // console.log(this.state);
   };
   onChangeCity = city => {
@@ -88,6 +97,7 @@ class Update extends Component {
     let dates = moment(dateString);
     let date = moment(dateString).format("DD-MM-YYYY HH:mm:ss");
     this.setState({ dates: dates, date: date });
+    console.log("d", this.state.date);
   };
   reversingFormat(date) {
     const moment = require("moment");
@@ -96,7 +106,7 @@ class Update extends Component {
     console.log("e", date);
   }
   render() {
-    console.log('b',this.state);
+    // console.log('b', this.state.galaxy.toString());
     const img1 = require(`../../assets/img/frame_layout.png`);
     return (
       <Layout className="layout">
@@ -140,7 +150,8 @@ class Update extends Component {
               />
             </Col>
           </Row>
-          <form onSubmit={this.handleFormSubmit} action="/checkout2">
+          <form onSubmit={this.handleFormSubmit}>
+            
             <Row>
               <Col lg={24}>
                 <div className="content-maps-container md-black">
@@ -244,7 +255,7 @@ class Update extends Component {
                     <Radio.Group
                       className="wrap"
                       name="design"
-                      value={this.state.design}
+                      value={this.state.design.toString()}
                       onChange={this.handleChange}
                     >
                       <Row gutter={[48, 16]}>
@@ -309,7 +320,7 @@ class Update extends Component {
                             <Radio.Group
                               name="time_format"
                               onChange={this.handleChange}
-                              value={this.state.time_format}
+                              value={this.state.time_format.toString()}
                             >
                               <Radio.Button value="0">
                                 24 hours format
@@ -326,7 +337,7 @@ class Update extends Component {
                           <div className="input-line">
                             <label>Moon Phase</label>
                             <br />
-                            <Radio.Group name="moon" onChange={this.handleChange} value={this.state.moon}>
+                            <Radio.Group name="moon" onChange={this.handleChange} value={this.state.moon.toString()}>
                               <Radio.Button value="0">No</Radio.Button>
                               <Radio.Button value="1">Yes</Radio.Button>
                             </Radio.Group>
@@ -339,10 +350,10 @@ class Update extends Component {
                             <Radio.Group
                               name="galaxy"
                               onChange={this.handleChange}
-                              value={this.state.galaxy}
+                              value={this.state.galaxy.toString()}
                             >
-                              <Radio.Button value="0">No</Radio.Button>
-                              <Radio.Button value="1">Yes</Radio.Button>
+                              <Radio.Button value='0'>No</Radio.Button>
+                              <Radio.Button value='1'>Yes</Radio.Button>
                             </Radio.Group>
                           </div>
                         </Col>
@@ -356,7 +367,7 @@ class Update extends Component {
                           className="form"
                           rows={5}
                           placeholder="Dear or Belongs to"
-                          name="text_1"
+                          name="text_line_1"
                           onChange={this.handleChange}
                         />
                       </div>
@@ -367,7 +378,7 @@ class Update extends Component {
                           className="form"
                           rows={5}
                           placeholder="Name/initial Your beloved"
-                          name="text_2"
+                          name="text_line_2"
                           onChange={this.handleChange}
                         />
                       </div>
@@ -378,7 +389,7 @@ class Update extends Component {
                           className="form"
                           rows={5}
                           placeholder="Foot Note from yours"
-                          name="text_3"
+                          name="text_line_3"
                           onChange={this.handleChange}
                         />
                       </div>

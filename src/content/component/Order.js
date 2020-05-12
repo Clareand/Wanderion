@@ -352,33 +352,33 @@ class Order extends Component {
                           <div className="input-line non-justify">
                             <label>Text 1</label>
                             <TextArea
-                              value={this.state.text_1}
+                              value={this.state.text_line_1}
                               className="form"
                               rows={5}
                               placeholder="Dear or Belongs to"
-                              name="text_1"
+                              name="text_line_1"
                               onChange={this.handleChange}
                             />
                           </div>
                           <div className="input-line non-justify">
                             <label>Text 2</label>
                             <TextArea
-                              value={this.state.text_2}
+                              value={this.state.text_line_2}
                               className="form"
                               rows={5}
                               placeholder="Name/initial Your beloved"
-                              name="text_2"
+                              name="text_line_2"
                               onChange={this.handleChange}
                             />
                           </div>
                           <div className="input-line non-justify">
                             <label>Text 3</label>
                             <TextArea
-                              value={this.state.text_3}
+                              value={this.state.text_line_3}
                               className="form"
                               rows={5}
                               placeholder="Foot Note from yours"
-                              name="text_3"
+                              name="text_line_3"
                               onChange={this.handleChange}
                             />
                           </div>
