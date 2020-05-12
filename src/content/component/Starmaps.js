@@ -36,26 +36,30 @@ class Starmaps extends Component {
       rate:newValue
     })
   }
-  componentWillMount(){
+  // componentWillMount(){
     
-     axios.get("http://localhost:8000/api/user/best").then(res => {
-       const graph = res.data;
-       this.setState({ graph: graph });
-      //  console.log(graph)
-     });
+   
   
-  }
+  // }
 
   componentDidMount(){
-    // Create chart instance
-    let chart = am4core.create(
+    var graph=[];
+      axios.get("http://localhost:8000/api/user/best").then(res => {
+         graph = res.data;
+        this.graphs(graph)
+        //  console.log(graph)
+      });
+  
+  }
+  graphs(data){
+      let chart = am4core.create(
       "chartdiv",
       am4charts.XYChart
     );
 
     // Add data
-    chart.data = this.state.graph
-    console.log('a',chart.data);
+    chart.data = data
+    console.log('a',data);
     // Create axes
     let categoryAxis = chart.xAxes.push(
       new am4charts.CategoryAxis()
@@ -77,7 +81,7 @@ class Starmaps extends Component {
     series.name = "Best Seller";
     series.columns.template.tooltipText =
       "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-    series.columns.template.fill = am4core.color("#104547"); // fill
+    series.columns.template.fill = am4core.color("#01016e"); // fill
   }
  
     render() {
@@ -109,19 +113,18 @@ class Starmaps extends Component {
                 </Col>
                 <Col lg={24}>
                   <div className="content-maps-container md-black">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam non justo vel est maximus pellentesque ac sit amet ex.
-                    Ut at sapien in nulla luctus laoreet. Etiam vestibulum,
-                    tellus in tincidunt dapibus, lacus tellus malesuada nibh, ac
-                    malesuada quam neque ac leo. Sed id dui nec libero facilisis
-                    tempus nec at ipsum. Pellentesque fringilla molestie libero,
-                    in facilisis leo ultrices vitae. Proin elementum cursus nisl
-                    nec commodo. Integer tempus, augue non finibus viverra, elit
-                    odio viverra nulla, sit amet vulputate metus nulla sed urna.
-                    Praesent a varius neque, non tincidunt leo. Morbi turpis
-                    metus, rutrum non venenatis vel, rhoncus eget nisi. Praesent
-                    vel tellus venenatis, ultrices dui non, rutrum est. Donec
-                    feugiat ut ex nec vulputate.
+                    The starmap is a map of the positions of stars that exist in
+                    the sky at specific times, locations and dates. It's
+                    definitely real and consistent with the current star
+                    conditions. For starmaps, you can also choose a good time in
+                    the past or the future. So, these star maps are personalized
+                    and unique. Now for this starmap you can be matched to be
+                    like cell phone wallpaper, wall decorations, birthday gifts,
+                    wedding gifts, etc. For the time of operation the starmap
+                    would be designed in approximately 4 to 5 days of labor. In
+                    addition, we can also personalize those words specifically
+                    for you to store your special memories and we can print star
+                    maps and send them digitally by email or by Courier service.
                   </div>
                 </Col>
                 <Col lg={24}>
@@ -162,14 +165,11 @@ class Starmaps extends Component {
                 </Col> */}
                 <Col lg={24}>
                   <div className="md-blue title-maps-container">
-                    Best Sellers
+                    Best Sellers Design
                   </div>
                 </Col>
                 <Col lg={24}>
-                  <div id="chartdiv"></div>
-                  <div className="md-blue title-maps-container">
-                    Here gonna be graphic
-                  </div>
+                  <div id="chartdiv" className="content-maps-container"></div>
                 </Col>
               </Row>
             </Content>

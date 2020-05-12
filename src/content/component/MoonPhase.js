@@ -55,10 +55,9 @@ class MoonPhase extends Component {
     const moment = require("moment");
     let now = moment();
     const date = now.format("DD-MM-YYYY");
+    const dateNow = now.format("dddd, MMMM Do YYYY");
     console.log('d',date);
     return date
-      // const dateNow = now.format("dddd, MMMM Do YYYY");
-      // this.componentDidMount(date,dateNow);
   }
   componentDidMount(){
     let date = localStorage.getItem("dates");
@@ -66,7 +65,12 @@ class MoonPhase extends Component {
     console.log('g',dateNow);
     console.log('c',date);
     if (date === null && dateNow===null) {
-      date = this.emptyDate();
+      // date = this.emptyDate();
+       const moment = require("moment");
+       let now = moment();
+       date = now.format("DD-MM-YYYY");
+       dateNow = now.format("dddd, MMMM Do YYYY");
+       console.log("d", date);
       console.log('e',date);
     }
     axios

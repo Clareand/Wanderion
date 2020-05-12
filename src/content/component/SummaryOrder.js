@@ -15,24 +15,9 @@ export default class SummaryOrder extends Component {
                    this.setState({ data: data });
                    console.log(data);
                  }
-                 handleFormSubmit = () => {
-                   this.state.step1.price = this.state.total;
-                   const data = this.state.step1;
-                   console.log(data);
-                   axios
-                     .post(`http://localhost:8000/api/user/store`, data)
-                     .then(res => {
-                       console.log("x", res);
-                       if (res.data.status === "fail") {
-                         history.push("/checkout");
-                         console.log("x", res);
-                       } else {
-                         let order = res.data.result;
-                         localStorage.setItem("order", JSON.stringify(order));
-                         localStorage.removeItem("step-1");
-                         history.push("/summary");
-                       }
-                     });
+                 renderPdf = () => {
+                  const user = localStorage.getItem("user");
+                  axios.get("http://localhost:8000/api/user/render/" + user);
                  };
 
                  render() {
@@ -91,7 +76,7 @@ export default class SummaryOrder extends Component {
                                  text="Download"
                                  background="#000053"
                                  className="btn-md-blue"
-                                 onClick={this.handleFormSubmit}
+                                 onClick={this.renderPdf}
                                />
                              </div>
                            </Col>

@@ -42,6 +42,7 @@
 
 .md-black{
     font-size: 12pt;
+    color: #000000;
 }
 
 .sm-black{
@@ -63,7 +64,7 @@
 }
 
 .lg-bold{
-  font-size: 22pt;
+  font-size: 40pt;
   font-weight: bold;
 }
 
@@ -238,6 +239,7 @@
 
 .row-detail{
   margin : 20px 0 20px 0;
+  font-size: 12pt;
 }
 
 .bg-gray{
