@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Wanderion/precache-manifest.ae966d81d554fd39cc6f942fdd6630fe.js"
+  "/Wanderion/precache-manifest.978fe3332a0f75e723b41aebe1ab7a20.js"
 );
 
 self.addEventListener('message', (event) => {
