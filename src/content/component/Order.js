@@ -3,6 +3,7 @@ import { Layout, Row, Col, Input, Select, AutoComplete, DatePicker, Radio, TimeP
 import CardImg from "./../layout/CardImg";
 import ButtonLink from './../layout/ButtonLink.js';
 import './../css/style.css';
+import { history } from "./../../router/store";
 import moment from "moment";
 import axios from 'axios';
 const { Content, Footer } = Layout; 
@@ -84,6 +85,8 @@ class Order extends Component {
   delete this.state.cities;
   delete this.state.dates;
   localStorage.setItem('step-1',JSON.stringify(this.state));
+  history.push('/checkout')
+  window.location.reload(true);
   // console.log(this.state);
   };
   onChangeCity = city => { this.setState({ id_city:city}) }
@@ -398,7 +401,7 @@ class Order extends Component {
                         background="#000053"
                         className='btn-md-blue'
                         htmlType='submit'
-                        href="/checkout"
+                        // href="/checkout"
                         onClick={this.handleFormSubmit}
                       />
                     </div>

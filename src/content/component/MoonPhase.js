@@ -3,6 +3,7 @@ import './../css/style.css';
 import { Layout, Row, Col, Input, DatePicker } from 'antd';
 import CardImg from "./../layout/CardImg";
 import ButtonLink from './../layout/ButtonLink.js';
+import { history } from "./../../router/store";
 import Moment from 'react-moment';
 import axios from "axios";
 const { Content,Footer } = Layout; 
@@ -30,6 +31,8 @@ class MoonPhase extends Component {
     console.log('b',dates);
     localStorage.setItem("dates", dates);
     localStorage.setItem("dateNow", dateNow);
+    history.push('/moonPhase')
+    window.location.reload(true);
   }
   pathUri = (id)=>{
     switch (id) {
@@ -124,8 +127,9 @@ class MoonPhase extends Component {
                               text="Find!"
                               background="#000053"
                               className="btn-find"
-                              htmlType="submit"
-                              href="/moonPhase"
+                              onClick={this.handleSubmit}
+                              // htmlType="submit"
+                              // href="/moonPhase"
                             />
                           </div>
                         </Col>
