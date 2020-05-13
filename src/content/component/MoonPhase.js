@@ -31,8 +31,8 @@ class MoonPhase extends Component {
     console.log('b',dates);
     localStorage.setItem("dates", dates);
     localStorage.setItem("dateNow", dateNow);
-    history.push('/moonPhase')
-    window.location.reload(true);
+    // history.push('/moonPhase')
+    // window.location.reload(true);
   }
   pathUri = (id)=>{
     switch (id) {
