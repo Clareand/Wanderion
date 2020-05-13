@@ -70,7 +70,7 @@ class MoonPhase extends Component {
       console.log('e',date);
     }
     axios
-      .post(`http://localhost:8000/api/user/moonPhase`, { date })
+      .post(`http://cors-anywhere.localhost:8000/api/user/moonPhase`, { date })
       .then(res => {
         const phase = res.data.result.phase.name;
         const id = res.data.result.phase.id;
