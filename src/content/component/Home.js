@@ -28,7 +28,7 @@ class Home extends React.Component {
                                     <Col span={24}>
                                         <div className="title-container">
                                             <br/>
-                                            <span className="big-bold-blue">Wanderion</span>
+                                            <span className="big-bold-blue">Wanderio</span>
                                         </div>
                                     </Col>
                                     <Col span={24}>
