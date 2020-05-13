@@ -76,9 +76,10 @@ export default class Checkout extends Component {
     }
 
     design(data){
-        if(data==0){
+        console.log(data)
+        if (data==="0"){
             return "All Black Starmaps"
-        }else if(data==1){
+        }else if(data==="1"){
             return "Black on White Starmaps"
         }else{
             return "White on Black Starmaps"
@@ -177,8 +178,9 @@ export default class Checkout extends Component {
           .then(res => {
               console.log("x", res);
             if (res.data.status === "fail") {
-              history.push("/checkout");
-              console.log('x',res);
+                this.componentWillMount()
+            //   history.push("/checkout");
+            //   console.log('x',res);
             }else{
                 let order = res.data.result
                 localStorage.setItem('order', JSON.stringify(order));
@@ -195,7 +197,8 @@ export default class Checkout extends Component {
             window.location.reload(true);
         }else{
             this.totalPrice(data.moon);
-            const design = this.design(this.state.design);
+            const design = this.design(data.design);
+            // console.log('design',)
             const datas = this.renderData(design, data);
             this.setState({ data: datas, step1: data });
             this.state.step1.price = this.state.total;
