@@ -47,7 +47,9 @@ class Header extends React.Component {
                 </Menu.Item>
               </Menu.ItemGroup>
               <Menu.ItemGroup title="Design">
-                <Menu.Item key="design:1">All Design</Menu.Item>
+                <Menu.Item key="design:1">
+                  <Link to="/order">All Design</Link>
+                </Menu.Item>
                 <Menu.Item key="design:2">
                   <Link to="/moonPhase">Moon Phase</Link>
                 </Menu.Item>
