@@ -125,6 +125,7 @@ class MoonPhase extends Component {
                               background="#000053"
                               className="btn-find"
                               htmlType="submit"
+                              href="/moonPhase"
                             />
                           </div>
                         </Col>

@@ -398,6 +398,7 @@ class Order extends Component {
                         background="#000053"
                         className='btn-md-blue'
                         htmlType='submit'
+                        href="/checkout"
                         onClick={this.handleFormSubmit}
                       />
                     </div>
