@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Wanderion/static/css/main.ee5d94c7.chunk.css",
-    "main.js": "/Wanderion/static/js/main.f88c4402.chunk.js",
-    "main.js.map": "/Wanderion/static/js/main.f88c4402.chunk.js.map",
+    "main.js": "/Wanderion/static/js/main.803e99a3.chunk.js",
+    "main.js.map": "/Wanderion/static/js/main.803e99a3.chunk.js.map",
     "runtime-main.js": "/Wanderion/static/js/runtime-main.ba003eb7.js",
     "runtime-main.js.map": "/Wanderion/static/js/runtime-main.ba003eb7.js.map",
     "xlsx.js": "/Wanderion/static/js/xlsx.1463e6ab.chunk.js",
     "xlsx.js.map": "/Wanderion/static/js/xlsx.1463e6ab.chunk.js.map",
     "static/css/3.1bd2ab2f.chunk.css": "/Wanderion/static/css/3.1bd2ab2f.chunk.css",
-    "static/js/3.6dfee5e1.chunk.js": "/Wanderion/static/js/3.6dfee5e1.chunk.js",
-    "static/js/3.6dfee5e1.chunk.js.map": "/Wanderion/static/js/3.6dfee5e1.chunk.js.map",
+    "static/js/3.5823dbd0.chunk.js": "/Wanderion/static/js/3.5823dbd0.chunk.js",
+    "static/js/3.5823dbd0.chunk.js.map": "/Wanderion/static/js/3.5823dbd0.chunk.js.map",
     "static/js/4.0ffdfcb4.chunk.js": "/Wanderion/static/js/4.0ffdfcb4.chunk.js",
     "static/js/4.0ffdfcb4.chunk.js.map": "/Wanderion/static/js/4.0ffdfcb4.chunk.js.map",
     "static/js/5.b4dbd1ab.chunk.js": "/Wanderion/static/js/5.b4dbd1ab.chunk.js",
@@ -17,11 +17,11 @@
     "static/js/6.d040d7d5.chunk.js": "/Wanderion/static/js/6.d040d7d5.chunk.js",
     "static/js/6.d040d7d5.chunk.js.map": "/Wanderion/static/js/6.d040d7d5.chunk.js.map",
     "index.html": "/Wanderion/index.html",
-    "precache-manifest.eb7d3df5bed4d93755d30d14a67e19c2.js": "/Wanderion/precache-manifest.eb7d3df5bed4d93755d30d14a67e19c2.js",
+    "precache-manifest.ae966d81d554fd39cc6f942fdd6630fe.js": "/Wanderion/precache-manifest.ae966d81d554fd39cc6f942fdd6630fe.js",
     "service-worker.js": "/Wanderion/service-worker.js",
     "static/css/3.1bd2ab2f.chunk.css.map": "/Wanderion/static/css/3.1bd2ab2f.chunk.css.map",
     "static/css/main.ee5d94c7.chunk.css.map": "/Wanderion/static/css/main.ee5d94c7.chunk.css.map",
-    "static/js/3.6dfee5e1.chunk.js.LICENSE.txt": "/Wanderion/static/js/3.6dfee5e1.chunk.js.LICENSE.txt",
+    "static/js/3.5823dbd0.chunk.js.LICENSE.txt": "/Wanderion/static/js/3.5823dbd0.chunk.js.LICENSE.txt",
     "static/js/5.b4dbd1ab.chunk.js.LICENSE.txt": "/Wanderion/static/js/5.b4dbd1ab.chunk.js.LICENSE.txt",
     "static/js/6.d040d7d5.chunk.js.LICENSE.txt": "/Wanderion/static/js/6.d040d7d5.chunk.js.LICENSE.txt",
     "static/media/0.png": "/Wanderion/static/media/0.2cf176f1.png",
@@ -44,8 +44,8 @@
   "entrypoints": [
     "static/js/runtime-main.ba003eb7.js",
     "static/css/3.1bd2ab2f.chunk.css",
-    "static/js/3.6dfee5e1.chunk.js",
+    "static/js/3.5823dbd0.chunk.js",
     "static/css/main.ee5d94c7.chunk.css",
-    "static/js/main.f88c4402.chunk.js"
+    "static/js/main.803e99a3.chunk.js"
   ]
 }
