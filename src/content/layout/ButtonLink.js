@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "antd";
+import { Link } from 'react-router-dom';
 // import './style.css';
 function ButtonLink({
     type, text, disabled, borderRadius = 25,
@@ -9,28 +10,30 @@ function ButtonLink({
 })
     {
         return (
-                <Button
-                    type={type}
-                    className={className}
-                    disabled={disabled}
-                    style={{
-                        backgroundColor: background,
-                        color: textColor,
-                        borderRadius: borderRadius,
-                        border: border,
-                        margin: margin,
-                        marginLeft: marginLeft,
-                        marginRight: marginRight,
-                        marginTop: marginTop,
-                        marginBottom: marginBottom,
-                    }}
-                    onClick={onClick}
-                    icon={icon}
-                    href={href}
-                    htmlType={htmlType}
-                >
-                    {text}
-                </Button>
+                <Link to={href}>
+                    <Button
+                        type={type}
+                        className={className}
+                        disabled={disabled}
+                        style={{
+                            backgroundColor: background,
+                            color: textColor,
+                            borderRadius: borderRadius,
+                            border: border,
+                            margin: margin,
+                            marginLeft: marginLeft,
+                            marginRight: marginRight,
+                            marginTop: marginTop,
+                            marginBottom: marginBottom,
+                        }}
+                        onClick={onClick}
+                        icon={icon}
+                        // href={href}
+                        htmlType={htmlType}
+                    >
+                        {text}
+                    </Button>
+                </Link>
         );
     }
 
