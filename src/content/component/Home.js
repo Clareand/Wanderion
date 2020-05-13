@@ -54,7 +54,7 @@ class Home extends React.Component {
                                                 marginLeft={16}
                                                 border="1px solid #000053"
                                                 className='button-link'
-                                                href='/order'
+                                                href={<Link to="/order"></Link>}
                                             />
                                         </div>
                                     </Col>
