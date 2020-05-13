@@ -195,7 +195,7 @@ export default class Checkout extends Component {
             window.location.reload(true);
         }else{
             this.totalPrice(data.moon);
-            const design = this.design(this.state.design);
+            const design = this.design(data.design);
             const datas = this.renderData(design, data);
             this.setState({ data: datas, step1: data });
             this.state.step1.price = this.state.total;
