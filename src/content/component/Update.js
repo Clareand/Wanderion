@@ -84,8 +84,8 @@ class Update extends Component {
     delete this.state.dates;
     delete this.state.updated_at
     localStorage.setItem("order", JSON.stringify(this.state));
-    history.push("/confirmChange");
-    window.location.reload(true);
+    // history.push("/confirmChange");
+    // window.location.reload(true);
     // console.log(this.state);
   };
   onChangeCity = city => {
@@ -150,8 +150,8 @@ class Update extends Component {
               />
             </Col>
           </Row>
-          <form onSubmit={this.handleFormSubmit}>
-            
+          <form >
+            {/* onSubmit={this.handleFormSubmit} */}
             <Row>
               <Col lg={24}>
                 <div className="content-maps-container md-black">
@@ -405,7 +405,8 @@ class Update extends Component {
                     text="Next"
                     background="#000053"
                     className="btn-md-blue"
-                    htmlType="submit"
+                    // htmlType="submit"
+                    href="/confirmChange"
                     onClick={this.handleFormSubmit}
                   />
                 </div>

@@ -183,8 +183,8 @@ export default class Checkout extends Component {
                 let order = res.data.result
                 localStorage.setItem('order', JSON.stringify(order));
                 localStorage.removeItem('step-1');
-                history.push("/summary");
-                window.location.reload(true);
+                // history.push("/summary");
+                // window.location.reload(true);
             }
           });
     };
@@ -240,7 +240,8 @@ export default class Checkout extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <form onSubmit={this.handleFormSubmit}>
+                    <form>
+                        {/* onSubmit={this.handleFormSubmit} */}
                         <Row className="section-container">
                             <Col lg={24}>
                                 <div className="big-blue title-maps-container">
@@ -248,6 +249,7 @@ export default class Checkout extends Component {
                                         text="Checkout"
                                         background="#000053"
                                         className='btn-md-blue'
+                                        href="/summary"
                                         onClick={this.handleFormSubmit}
                                     />
                                 </div>

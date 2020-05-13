@@ -32,7 +32,8 @@ class CheckOrder extends Component {
                   </div>
                 </Col>
               </Row>
-              <form onSubmit={this.handleFormSubmit} action="/info">
+              <form>
+                {/* onSubmit={this.handleFormSubmit} action="/info" */}
                 <Row>
                   <Col lg={24}>
                     <div className="title-maps-container">
@@ -45,7 +46,9 @@ class CheckOrder extends Component {
                         text="Find Order!"
                         background="#000053"
                         className='btn-bg-blue'
-                        htmlType='submit'
+                        href="/info"
+                        onClick={this.handleFormSubmit}
+                        // htmlType='submit'
                       />
                     </div>
                   </Col>

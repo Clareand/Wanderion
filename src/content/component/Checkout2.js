@@ -177,8 +177,8 @@ export default class Checkout2 extends Component {
       } else {
         localStorage.setItem("order", JSON.stringify(data));
         localStorage.removeItem("step-1");
-        history.push("/ChangeSum");
-        window.location.reload(true);
+        // history.push("/ChangeSum");
+        // window.location.reload(true);
       }
     });
   };
@@ -245,6 +245,7 @@ export default class Checkout2 extends Component {
                     text="Confirm"
                     background="#000053"
                     className="btn-md-blue"
+                    href="/ChangeSum"
                     onClick={this.handleFormSubmit}
                   />
                 </div>

@@ -108,7 +108,8 @@ class MoonPhase extends Component {
               <Row gutter={[48, 16]}>
                 <Col span={9}>
                   <div className="content-datepicker">
-                    <form onSubmit={this.handleSubmit}>
+                    <form>
+                      {/* onSubmit={this.handleSubmit} */}
                       <Row gutter={[16, 16]}>
                         <Col>
                           <div className="input-line sm-blue">
@@ -129,7 +130,7 @@ class MoonPhase extends Component {
                               className="btn-find"
                               onClick={this.handleSubmit}
                               // htmlType="submit"
-                              // href="/moonPhase"
+                              href="/moonPhase"
                             />
                           </div>
                         </Col>

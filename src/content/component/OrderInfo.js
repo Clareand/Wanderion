@@ -88,8 +88,8 @@ export default class OrderInfo extends Component {
                    });
                  }
                  handleChange(){
-                    history.push("/change");
-                    window.location.reload(true);
+                    // history.push("/change");
+                    // window.location.reload(true);
                  }
                  printPDF(){
                    const user = localStorage.getItem("user");
@@ -285,6 +285,7 @@ export default class OrderInfo extends Component {
                                            text="Change"
                                            background="#d98200"
                                            className="btn-md-blue"
+                                           href="/change"
                                            onClick={this.handleChange}
                                          />
                                        </div>

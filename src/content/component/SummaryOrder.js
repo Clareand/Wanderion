@@ -16,7 +16,7 @@ export default class SummaryOrder extends Component {
                    console.log(data);
                  }
                  renderPdf = () => {
-                  const user = localStorage.getItem("user");
+                  const user = this.state.data.order_code 
                   axios.get("http://localhost:8000/api/user/render/" + user);
                  };
 

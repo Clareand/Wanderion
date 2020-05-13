@@ -85,8 +85,8 @@ class Order extends Component {
   delete this.state.cities;
   delete this.state.dates;
   localStorage.setItem('step-1',JSON.stringify(this.state));
-  history.push('/checkout')
-  window.location.reload(true);
+  // history.push('/checkout')
+  // window.location.reload(true);
   // console.log(this.state);
   };
   onChangeCity = city => { this.setState({ id_city:city}) }
@@ -150,7 +150,8 @@ class Order extends Component {
                   />
                 </Col>
               </Row>
-              <form onSubmit={this.handleFormSubmit} action="/checkout" >
+              <form>
+                {/* onSubmit={this.handleFormSubmit} action="/checkout" */}
                 <Row>
                   <Col lg={24}>
                     <div className="content-maps-container md-black">
@@ -401,7 +402,7 @@ class Order extends Component {
                         background="#000053"
                         className='btn-md-blue'
                         htmlType='submit'
-                        // href="/checkout"
+                        href="/checkout"
                         onClick={this.handleFormSubmit}
                       />
                     </div>
