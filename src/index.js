@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import {history} from "./router/store"
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink,HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <Router basename={process.env.PUBLIC_URL} history={history}>
+  <HashRouter basename={process.env.PUBLIC_URL} history={history}>
     <App />
-  </Router>,
+  </HashRouter>,
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
